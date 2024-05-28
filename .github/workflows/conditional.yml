@@ -6,4 +6,4 @@ jobs:
   hello-world:
     runs-on: self-hosted
     - name: first job in GitHub Actions
-      run: 'echo "Hi This is Prakash Kuvvam"'
+      run: echo "Hi This is Prakash Kuvvam"
