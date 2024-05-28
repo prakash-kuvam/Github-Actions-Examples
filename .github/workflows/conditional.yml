@@ -1,7 +1,5 @@
 name: example-workflow
-on:
-  branches:
-    - main
+on: [push]
 jobs:
   hello-world:
     runs-on: self-hosted
