@@ -7,3 +7,6 @@ jobs:
       - name: first job in GitHub Actions
         run: |
           echo "Hi This is Prakash Kuvvam"
+      - name: Print PWD
+        run: |
+          pwd && ls -l
