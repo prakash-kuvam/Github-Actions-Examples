@@ -14,3 +14,7 @@ jobs:
           echo "Msg 1"
           echo "Msg 2"
           echo "::endgroup::"
+      - name: Adding env var to github workflow
+        run: echo "$MY_VAL=Prakash" >> $GITHUB_ENV
+      - name: Printing that env 
+        run: echo "$MY_VAL"
