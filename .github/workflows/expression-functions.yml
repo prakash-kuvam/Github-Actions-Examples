@@ -29,8 +29,8 @@ jobs:
         run: echo "Job context in JSON- ${{ toJSON(github.job) }}"
       - name: Parse JSON string
         run: echo "Parsed JSON- ${{ fromJSON('{"hello":"world"}').hello }}"
-      - name: Hash files
-        run: echo "Hash of files- ${{ hashFiles('**/package-lock.json', '**/Gemfile.lock') }}
+      # - name: Hash files
+      #   run: echo "Hash of files- ${{ hashFiles('**/package-lock.json', '**/Gemfile.lock') }}
       - name: The job has succeeded
         if: ${{ success() }}
         run: echo "The JOB was Successful."
