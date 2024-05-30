@@ -1,0 +1,16 @@
+name: first yml file on workflow commands
+
+on: 
+  push:
+    branches:
+      - "main"
+jobs:
+  Workflow-on-Workflow-commands:
+    runs-on: self-hosted
+    steps:
+      - name: First step on my workflow
+        run: |
+          echo "::group::My Group Messages"
+          echo "Msg 1"
+          echo "Msg 2"
+          echo "::endgroup::"
