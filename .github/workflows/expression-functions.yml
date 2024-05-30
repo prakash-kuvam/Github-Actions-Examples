@@ -12,7 +12,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: The Job has Successed
-        run: ${{success()}}
+        run: ${{ success() }}
 
 
       # - name: Check if string contains substring
