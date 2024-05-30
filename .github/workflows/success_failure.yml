@@ -1,0 +1,21 @@
+name: Success and Failure Example
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  success-failure-example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: echo "This step always runs."
+
+      - name: Step 2 - Success Condition
+        if: success()
+        run: echo "This step runs only if the previous steps were successful."
+
+      - name: Step 3 - Failure Condition
+        if: failure()
+        run: echo "This step runs only if one of the previous steps failed."
