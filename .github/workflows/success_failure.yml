@@ -7,7 +7,7 @@ on:
 
 jobs:
   success-failure-example:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Step 1
         run: echo "This step always runs."
