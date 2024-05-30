@@ -10,12 +10,14 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Step 1
-        run: echo "This step always runs."
+        run: jq
 
       - name: Step 2 - Success Condition
         if: success()
-        run: echo "This step runs only if the previous steps were successful."
+        run: echo "JQ is already installed"
 
       - name: Step 3 - Failure Condition
         if: failure()
-        run: echo "This step runs only if one of the previous steps failed."
+        run: |
+          sudo apt install -y jq
+          echo "JQ is not their. So Installing NOW!!!"
