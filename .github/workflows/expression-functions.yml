@@ -14,7 +14,7 @@ jobs:
       - name: First step in multiple Steps
         run: pwd
       - name: The Job has Successed
-        run: ${{ success() }}
+        if: ${{ success() }}
 
 
       # - name: Check if string contains substring
