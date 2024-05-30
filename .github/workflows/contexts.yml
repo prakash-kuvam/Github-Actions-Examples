@@ -4,7 +4,7 @@ on: ['push']
 
 jobs:
   github-actions-contexts:
-    runs-on: self-hosted
+    runs-on: [ubuntu-1, centos-1]
     steps:  
       - name: first step
         env:
