@@ -7,7 +7,7 @@ on:
 
 jobs:
   expression-demo:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Print message based on branch name
         if: contains(github.ref, 'main')
