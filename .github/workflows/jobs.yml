@@ -5,6 +5,7 @@ on: ['push']
 jobs:
   second-job:
     runs-on: [centos-1]
+    needs: first-job
     steps:
       - name: step A on First Job
         run: echo "Hello From second JOB"
@@ -15,6 +16,7 @@ jobs:
         run: echo "Hello From First JOB"
   third-job:
     runs-on: [centos-1]
+    needs: [first-job,second-job]
     steps:
       - name: step A on First Job
         run: echo "Hello From third JOB"
