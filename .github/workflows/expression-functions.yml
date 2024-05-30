@@ -11,6 +11,8 @@ jobs:
   expression-functions:
     runs-on: self-hosted
     steps:
+      - name: First step in multiple Steps
+        run: pwd
       - name: The Job has Successed
         run: ${{ success() }}
 
