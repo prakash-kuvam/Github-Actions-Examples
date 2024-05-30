@@ -13,3 +13,8 @@ jobs:
     steps:
       - name: step A on First Job
         run: echo "Hello From First JOB"
+  third-job:
+    runs-on: [centos-1]
+    steps:
+      - name: step A on First Job
+        run: echo "Hello From third JOB"
